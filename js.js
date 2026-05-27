@@ -19,7 +19,6 @@ for (let i = 0; i < 5; i++) {
 
 } 
 
-
     let mensagem = "Os números inseridos foram; \n"
 for (let i = 0; i < numerosDigitados.length; i++) {
 
