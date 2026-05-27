@@ -1,42 +1,55 @@
-let nomePersonagem;
-let nomeObra;
-let categoria;
-let personagem; 
+let produtos = [];
+let somaProdutos = 0;
+let preco;
+ let nome;
+for (let i = 0; i < 5; i++) {
+   
 
-while (true) {
-    nomePersonagem = prompt("Digite o nome do personagem:");
+    while (true) {
+        nome = prompt("Digite o nome do produto: ")
 
-    if (nomePersonagem.trim() !== "") {
-        break;
+       
+        if (nome.trim() == "") {
+
+            alert("Digite um produto válido")   
+        } else {
+            break; 
+        }
+
     }
 
-    alert("Digite um nome válido!");
-}
 
-while (true) {
-    nomeObra = prompt("Digite o nome da obra:");
+    
 
-    if (nomeObra.trim() !== "") {
-        break;
+    while (true) {
+        preco = Number(prompt("digite o preço do produto"))
+        if (isNaN(preco)) {
+
+            alert("Você não digitou um número")
+
+        } else {break;}
+
     }
 
-    alert("Digite uma obra válida!");
-}
+    produtos[i] = { 
+        nomeProduto: nome, 
+        precoProduto: preco,
 
-while (true) {
-    categoria = prompt("Digite o tipo da obra:");
-
-    if (categoria.trim() !== "") {
-        break;
     }
 
-    alert("Digite um tipo válido!");
-}
+} 
 
-personagem = { //Atribuindo, nome, tipo e obra ao um único objeto.
-    nome: nomePersonagem, 
-    obra: nomeObra,
-    tipo: categoria
-};
 
-alert( `${personagem.nome} aparece na ${personagem.tipo} "${personagem.obra}".`);
+
+let mensagem = "=== PRODUTOS ===\n\n"
+
+for (let i = 0; i < produtos.length; i++) {
+   
+    somaProdutos = somaProdutos + produtos[i].precoProduto
+    mensagem += "Produto: " + produtos[i].nomeProduto + "\n";
+    mensagem += "Preço: R$" + produtos[i].precoProduto + "\n";
+    mensagem += "===================== \n" 
+} 
+
+mensagem += "A Soma dos produtos é" + somaProdutos
+alert(mensagem);
