@@ -8,12 +8,12 @@ for (let i = 0; i < 5; i++) {
     while (true) {
         nome = prompt("Digite o nome do produto: ")
 
-       
+        //Trim remove os espaços da variável!
         if (nome.trim() == "") {
 
             alert("Digite um produto válido")   
         } else {
-            break; 
+            break; // Vai parar o lopping 
         }
 
     }
@@ -39,12 +39,13 @@ for (let i = 0; i < 5; i++) {
 
 } 
 
+console.log(produtos    )
 
-
+// \n quebra de linha do alert
 let mensagem = "=== PRODUTOS ===\n\n"
 
 for (let i = 0; i < produtos.length; i++) {
-   
+    console.log(typeof produtos[i].precoProduto)
     somaProdutos = somaProdutos + produtos[i].precoProduto
     mensagem += "Produto: " + produtos[i].nomeProduto + "\n";
     mensagem += "Preço: R$" + produtos[i].precoProduto + "\n";
