@@ -1,7 +1,7 @@
 let nomePersonagem;
 let nomeObra;
 let categoria;
-let personagem;
+let personagem; 
 
 while (true) {
     nomePersonagem = prompt("Digite o nome do personagem:");
@@ -33,8 +33,8 @@ while (true) {
     alert("Digite um tipo válido!");
 }
 
-personagem = { 
-    nome: nomePersonagem,
+personagem = { //Atribuindo, nome, tipo e obra ao um único objeto.
+    nome: nomePersonagem, 
     obra: nomeObra,
     tipo: categoria
 };
