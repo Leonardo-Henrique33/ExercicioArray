@@ -1,27 +1,42 @@
+let nomePersonagem;
+let nomeObra;
+let categoria;
+let personagem;
 
-let numerosDigitados = [];
-for (let i = 0; i < 5; i++) {
+while (true) {
+    nomePersonagem = prompt("Digite o nome do personagem:");
 
-    while (true) {
-    //Este while se repetirá enquanto essa condição for verdadeira, logo caso não seja (else) é necessário "brecar" ela.
-    while (true) { 
-        numero = Number(prompt("Digite um número"))
-
-        if (isNaN(numero)
-        ) {
-            alert("Você não digitou um número")
-
-        } else {
-            break;
-            break;// Break vai parar o lopping while
-        }
+    if (nomePersonagem.trim() !== "") {
+        break;
     }
-    numerosDigitados[i] = { numeroInserido: numero }
-@@ -23,6 +23,6 @@ for (let i = 0; i < 5; i++) {
-    let mensagem = "Os números inseridos foram; \n"
-for (let i = 0; i < numerosDigitados.length; i++) {
 
-    mensagem += "\n" + numerosDigitados[i].numeroInserido + "\n"
-    mensagem += "\n" + numerosDigitados[i].numeroInserido + "\n" // "\n" Serve para quebrar uma linha na mensagem exibida.
+    alert("Digite um nome válido!");
+}
 
-} alert(mensagem)
+while (true) {
+    nomeObra = prompt("Digite o nome da obra:");
+
+    if (nomeObra.trim() !== "") {
+        break;
+    }
+
+    alert("Digite uma obra válida!");
+}
+
+while (true) {
+    categoria = prompt("Digite o tipo da obra:");
+
+    if (categoria.trim() !== "") {
+        break;
+    }
+
+    alert("Digite um tipo válido!");
+}
+
+personagem = { 
+    nome: nomePersonagem,
+    obra: nomeObra,
+    tipo: categoria
+};
+
+alert( `${personagem.nome} aparece na ${personagem.tipo} "${personagem.obra}".`);
